@@ -12,7 +12,7 @@ print("")
 
 for path in glob(args.i + "/*"):
     
-    print("Processing file: ", path, + " ", end = "")
+    print("Processing file: ", path, + " ", end = " ")
     
     directory, filename = path.split("/")
     photo = open(path, "rb")
