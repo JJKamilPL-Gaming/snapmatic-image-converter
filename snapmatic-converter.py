@@ -26,6 +26,7 @@ for path in glob(args.i + "/*"):
     out_photo = open(args.o + "/" + filename + ".jpg", "wb")
     out_photo = out_photo.write(image_data)
     photo.close()
+    print("Done")
 
     json_data = bytearray()
     photo = open(path, "rb")
