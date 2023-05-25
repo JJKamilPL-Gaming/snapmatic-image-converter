@@ -12,7 +12,7 @@ print("")
 
 for path in glob(args.i + "/*"):
     
-    print("Processing file: ", path, end = "")
+    print("Processing file: ", path, "...", end = " ")
     
     directory, filename = path.split("/")
     photo = open(path, "rb")
@@ -26,6 +26,7 @@ for path in glob(args.i + "/*"):
     out_photo = open(args.o + "/" + filename + ".jpg", "wb")
     out_photo = out_photo.write(image_data)
     photo.close()
+    print("Done")
 
     json_data = bytearray()
     photo = open(path, "rb")
@@ -45,8 +46,7 @@ for path in glob(args.i + "/*"):
     
     out_json = open(args.o + "/" + filename + ".json", "wb")
     out_json = out_json.write(json_data)
+    photo.close()
     
-    
-
 print("")
 print("All files successfully converted")
