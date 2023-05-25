@@ -46,8 +46,7 @@ for path in glob(args.i + "/*"):
     
     out_json = open(args.o + "/" + filename + ".json", "wb")
     out_json = out_json.write(json_data)
+    photo.close()
     
-    
-
 print("")
 print("All files successfully converted")
